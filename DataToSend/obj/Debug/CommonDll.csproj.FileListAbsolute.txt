@@ -1,0 +1,12 @@
+C:\Users\jelfk\source\repos\ChuchumnoyDoctor\ForSYSTECH\DataToSend\DataToSend\DataToSend\bin\Debug\CommonDll.dll
+C:\Users\jelfk\source\repos\ChuchumnoyDoctor\ForSYSTECH\DataToSend\DataToSend\DataToSend\bin\Debug\CommonDll.pdb
+C:\Users\jelfk\source\repos\ChuchumnoyDoctor\ForSYSTECH\DataToSend\DataToSend\DataToSend\bin\Debug\Newtonsoft.Json.dll
+C:\Users\jelfk\source\repos\ChuchumnoyDoctor\ForSYSTECH\DataToSend\DataToSend\DataToSend\bin\Debug\System.Data.SQLite.dll
+C:\Users\jelfk\source\repos\ChuchumnoyDoctor\ForSYSTECH\DataToSend\DataToSend\DataToSend\bin\Debug\Newtonsoft.Json.xml
+C:\Users\jelfk\source\repos\ChuchumnoyDoctor\ForSYSTECH\DataToSend\DataToSend\DataToSend\bin\Debug\System.Data.SQLite.xml
+C:\Users\jelfk\source\repos\ChuchumnoyDoctor\ForSYSTECH\DataToSend\DataToSend\DataToSend\bin\Debug\System.Data.SQLite.dll.config
+C:\Users\jelfk\source\repos\ChuchumnoyDoctor\ForSYSTECH\DataToSend\DataToSend\DataToSend\obj\Debug\CommonDll.csprojAssemblyReference.cache
+C:\Users\jelfk\source\repos\ChuchumnoyDoctor\ForSYSTECH\DataToSend\DataToSend\DataToSend\obj\Debug\CommonDll.csproj.CoreCompileInputs.cache
+C:\Users\jelfk\source\repos\ChuchumnoyDoctor\ForSYSTECH\DataToSend\DataToSend\DataToSend\obj\Debug\CommonDll.csproj.CopyComplete
+C:\Users\jelfk\source\repos\ChuchumnoyDoctor\ForSYSTECH\DataToSend\DataToSend\DataToSend\obj\Debug\CommonDll.dll
+C:\Users\jelfk\source\repos\ChuchumnoyDoctor\ForSYSTECH\DataToSend\DataToSend\DataToSend\obj\Debug\CommonDll.pdb
