@@ -1,0 +1,458 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{1C1D1522-B36F-4A6B-B272-30E69088C1FD}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>TasksManager</RootNamespace>
+    <AssemblyName>TasksManager</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+    <LangVersion>8.0</LangVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+    <LangVersion>8.0</LangVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <Prefer32Bit>false</Prefer32Bit>
+    <Optimize>false</Optimize>
+    <LangVersion>8.0</LangVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
+    <LangVersion>8.0</LangVersion>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>
+    </StartupObject>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x64\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <LangVersion>8.0</LangVersion>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <OutputPath>bin\x64\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <LangVersion>8.0</LangVersion>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CommonDll, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\DataToSend\DataToSend\DataToSend\bin\Debug\CommonDll.dll</HintPath>
+    </Reference>
+    <Reference Include="EasyDox, Version=2.0.34.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\EasyDox.2.0.34\lib\EasyDox.dll</HintPath>
+    </Reference>
+    <Reference Include="GanttChart, Version=1.3.0.3, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\source\repos\NSprogramm2\ganttchart-master\GanttChart\bin\Debug\GanttChart.dll</HintPath>
+    </Reference>
+    <Reference Include="LiveCharts, Version=0.9.7.0, Culture=neutral, PublicKeyToken=0bc1f845d1ebb8df, processorArchitecture=MSIL">
+      <HintPath>..\packages\LiveCharts.0.9.7\lib\net45\LiveCharts.dll</HintPath>
+    </Reference>
+    <Reference Include="LiveCharts.WinForms, Version=0.9.7.1, Culture=neutral, PublicKeyToken=0bc1f845d1ebb8df, processorArchitecture=MSIL">
+      <HintPath>..\packages\LiveCharts.WinForms.0.9.7.1\lib\net45\LiveCharts.WinForms.dll</HintPath>
+    </Reference>
+    <Reference Include="LiveCharts.Wpf, Version=0.9.7.0, Culture=neutral, PublicKeyToken=0bc1f845d1ebb8df, processorArchitecture=MSIL">
+      <HintPath>..\packages\LiveCharts.Wpf.0.9.7\lib\net45\LiveCharts.Wpf.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Office.Interop.Excel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Office.Interop.Excel.15.0.4795.1000\lib\net20\Microsoft.Office.Interop.Excel.dll</HintPath>
+      <Private>True</Private>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="Microsoft.Office.Interop.Word, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Office.Interop.Word.15.0.4797.1003\lib\net20\Microsoft.Office.Interop.Word.dll</HintPath>
+      <Private>True</Private>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="Microsoft.WindowsAPICodePack, Version=1.1.3.3, Culture=neutral, PublicKeyToken=8985beaab7ea3f04, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft-WindowsAPICodePack-Core.1.1.3.3\lib\net452\Microsoft.WindowsAPICodePack.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.WindowsAPICodePack.Shell, Version=1.1.3.3, Culture=neutral, PublicKeyToken=8985beaab7ea3f04, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft-WindowsAPICodePack-Shell.1.1.3.3\lib\net452\Microsoft.WindowsAPICodePack.Shell.dll</HintPath>
+    </Reference>
+    <Reference Include="ObjectListView, Version=2.9.1.1072, Culture=neutral, PublicKeyToken=b1c5bf581481bcd4, processorArchitecture=MSIL">
+      <HintPath>..\packages\ObjectListView.Official.2.9.1\lib\net20\ObjectListView.dll</HintPath>
+    </Reference>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="Spire.License, Version=1.3.8.40, Culture=neutral, PublicKeyToken=b1144360237c8b3f, processorArchitecture=MSIL">
+      <HintPath>..\packages\Spire.PDF.6.9.0\lib\net40\Spire.License.dll</HintPath>
+    </Reference>
+    <Reference Include="Spire.Pdf, Version=6.9.0.0, Culture=neutral, PublicKeyToken=663f351905198cb3, processorArchitecture=MSIL">
+      <HintPath>..\packages\Spire.PDF.6.9.0\lib\net40\Spire.Pdf.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xaml" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase" />
+    <Reference Include="WindowsFormsIntegration" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CheckBoxComboBox\CheckBoxComboBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CheckBoxComboBox\CheckBoxComboBox.Designer.cs">
+      <DependentUpon>CheckBoxComboBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CheckBoxComboBox\GripBounds.cs" />
+    <Compile Include="CheckBoxComboBox\NativeMethods.cs" />
+    <Compile Include="CheckBoxComboBox\Popup.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CheckBoxComboBox\Popup.Designer.cs">
+      <DependentUpon>Popup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CheckBoxComboBox\PopupComboBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CheckBoxComboBox\PopupComboBox.Designer.cs">
+      <DependentUpon>PopupComboBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CheckBoxComboBox\Selection Wrappers\ListSelectionWrapper.cs" />
+    <Compile Include="CheckBoxComboBox\Selection Wrappers\ObjectSelectionWrapper.cs" />
+    <Compile Include="LocalConfig\Program.cs" />
+    <Compile Include="ImportDesignForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ImportDesignForm.Designer.cs">
+      <DependentUpon>ImportDesignForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OtherForm\Authorization.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OtherForm\Authorization.Designer.cs">
+      <DependentUpon>Authorization.cs</DependentUpon>
+    </Compile>
+    <Compile Include="src\BitmapUtil.cs" />
+    <Compile Include="src\ClockDropDown.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="src\IUpDown.cs" />
+    <Compile Include="src\Localization\Strings.Designer.cs" />
+    <Compile Include="src\Localization\Strings.ja.Designer.cs" />
+    <Compile Include="src\MaskedTextBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="src\MeasureString.cs" />
+    <Compile Include="src\MultiKey.cs" />
+    <Compile Include="src\RepeatingButtonEx.cs" />
+    <Compile Include="src\SnapWindowEx.cs" />
+    <Compile Include="src\SpinControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="src\TimePicker.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="src\Token.cs" />
+    <Compile Include="src\TokenEvents.cs" />
+    <Compile Include="src\TokenInputFlags.cs" />
+    <Compile Include="src\TokenValuePadRule.cs" />
+    <Compile Include="src\ToolStripDropDownAttacher.cs" />
+    <Compile Include="src\UpDownSpinner.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="TabControl_Main\Areas_Main\ButtonsNextPrevious.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="TabControl_Main\Areas_Main\ButtonsNextPrevious.Designer.cs">
+      <DependentUpon>ButtonsNextPrevious.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TabControl_Main\Areas_Main\ReadyPages\HR\HR_AddGroup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TabControl_Main\Areas_Main\ReadyPages\HR\HR_AddGroup.Designer.cs">
+      <DependentUpon>HR_AddGroup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TabControl_Main\Areas_Main\ReadyPages\HR\HR_AddWorker.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TabControl_Main\Areas_Main\ReadyPages\HR\HR_AddWorker.Designer.cs">
+      <DependentUpon>HR_AddWorker.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TabControl_Main\Areas_Main\ReadyPages\HR\HR_Page.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="TabControl_Main\Areas_Main\ReadyPages\HR\HR_Page.Designer.cs">
+      <DependentUpon>HR_Page.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TabControl_Main\Areas_Main\ReadyPages\HR\TreeListView_Groups.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="TabControl_Main\Areas_Main\ReadyPages\HR\TreeListView_Groups.Designer.cs">
+      <DependentUpon>TreeListView_Groups.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TabControl_Main\Areas_Main\ReadyPages\HR\TreeListView_HRMain.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="TabControl_Main\Areas_Main\ReadyPages\HR\TreeListView_HRMain.Designer.cs">
+      <DependentUpon>TreeListView_HRMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TabControl_Main\Areas_Main\ReadyPages\LazyLoad.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="TabControl_Main\Areas_Main\ReadyPages\LazyLoad.Designer.cs">
+      <DependentUpon>LazyLoad.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TabControl_Main\Areas_Main\ReadyPages\ControlToCreateChanged.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="TabControl_Main\Areas_Main\ReadyPages\ControlToCreateChanged.Designer.cs">
+      <DependentUpon>ControlToCreateChanged.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TabControl_Main\Areas_Main\ReadyPages\CheckComboList.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="TabControl_Main\Areas_Main\ReadyPages\CheckComboList.Designer.cs">
+      <DependentUpon>CheckComboList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TabControl_Main\Areas_Main\ReadyPages\PageExport.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="TabControl_Main\Areas_Main\ReadyPages\PageExport.Designer.cs">
+      <DependentUpon>PageExport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TabControl_Main\CommonTreeListView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="TabControl_Main\CommonTreeListView.Designer.cs">
+      <DependentUpon>CommonTreeListView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TabControl_Main\F_Loading\LoadDialog.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="TabControl_Main\F_Loading\LoadDialog.Designer.cs">
+      <DependentUpon>LoadDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TabControl_Main\F_ServerProcess\CustomProgressBar.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="TabControl_Main\F_ServerProcess\CustomProgressBar.Designer.cs">
+      <DependentUpon>CustomProgressBar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TabControl_Main\F_ServerProcess\ViewServerProcess.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="TabControl_Main\F_ServerProcess\ViewServerProcess.Designer.cs">
+      <DependentUpon>ViewServerProcess.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LocalConfig\MethodsCall.cs" />
+    <Compile Include="ImportDesignControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ImportDesignControl.Designer.cs">
+      <DependentUpon>ImportDesignControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="ExportDesignForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ExportDesignForm.Designer.cs">
+      <DependentUpon>ExportDesignForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OtherForm\TaskManagerForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OtherForm\TaskManagerForm.Designer.cs">
+      <DependentUpon>TaskManagerForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TabControl_Main\ImportProtocol.cs" />
+    <EmbeddedResource Include="CheckBoxComboBox\PopupComboBox.resx">
+      <DependentUpon>PopupComboBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ImportDesignForm.resx">
+      <DependentUpon>ImportDesignForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OtherForm\Authorization.resx">
+      <DependentUpon>Authorization.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\Localization\Strings.ja.resx" />
+    <EmbeddedResource Include="src\Localization\Strings.resx" />
+    <EmbeddedResource Include="TabControl_Main\Areas_Main\ButtonsNextPrevious.resx">
+      <DependentUpon>ButtonsNextPrevious.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TabControl_Main\Areas_Main\ReadyPages\HR\HR_AddGroup.resx">
+      <DependentUpon>HR_AddGroup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TabControl_Main\Areas_Main\ReadyPages\HR\HR_AddWorker.resx">
+      <DependentUpon>HR_AddWorker.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TabControl_Main\Areas_Main\ReadyPages\HR\HR_Page.resx">
+      <DependentUpon>HR_Page.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TabControl_Main\Areas_Main\ReadyPages\HR\TreeListView_Groups.resx">
+      <DependentUpon>TreeListView_Groups.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TabControl_Main\Areas_Main\ReadyPages\HR\TreeListView_HRMain.resx">
+      <DependentUpon>TreeListView_HRMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TabControl_Main\Areas_Main\ReadyPages\LazyLoad.resx">
+      <DependentUpon>LazyLoad.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TabControl_Main\Areas_Main\ReadyPages\ControlToCreateChanged.resx">
+      <DependentUpon>ControlToCreateChanged.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TabControl_Main\Areas_Main\ReadyPages\CheckComboList.resx">
+      <DependentUpon>CheckComboList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TabControl_Main\Areas_Main\ReadyPages\PageExport.resx">
+      <DependentUpon>PageExport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TabControl_Main\CommonTreeListView.resx">
+      <DependentUpon>CommonTreeListView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TabControl_Main\F_Loading\LoadDialog.resx">
+      <DependentUpon>LoadDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ImportDesignControl.resx">
+      <DependentUpon>ImportDesignControl.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TabControl_Main\F_ServerProcess\CustomProgressBar.resx">
+      <DependentUpon>CustomProgressBar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TabControl_Main\F_ServerProcess\ViewServerProcess.resx">
+      <DependentUpon>ViewServerProcess.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ExportDesignForm.resx">
+      <DependentUpon>ExportDesignForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OtherForm\TaskManagerForm.resx">
+      <DependentUpon>TaskManagerForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="LocalConfig\App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="CheckBoxComboBox\CheckBoxComboBox.csproj" />
+    <Content Include="CheckBoxComboBox\CheckBoxComboBox.csproj.user" />
+    <Content Include="LocalConfig\Resources\AnimationLoad.gif" />
+    <None Include="LocalConfig\Resources\calendar %282%29.png" />
+    <None Include="LocalConfig\Resources\calendar %281%29.png" />
+    <None Include="LocalConfig\Resources\calendar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="LocalConfig\Resources\giphy-facebook_s.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.6.1">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.6.1 %28x86 и x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PreBuildEvent>if exist "$(TargetPath).locked" del "$(TargetPath).locked"
+if exist "$(TargetPath)" if not exist "$(TargetPath).locked" move "$(TargetPath)" "$(TargetPath).locked"</PreBuildEvent>
+  </PropertyGroup>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
